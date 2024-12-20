@@ -11,7 +11,7 @@ Options:
   -h --help       Show this string.
   --version       Show version.
   --gpu=<id>      Comma separated GPU list. [default: 0,1,2,3]
-  --view=<dset>   Visualise images after augmentation. Choose 'train' or 'valid'.
+  --view=<dset>   Visualise images after augmentation. . 'train' or 'valid'.
 """
 
 import cv2
