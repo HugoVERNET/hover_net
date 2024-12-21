@@ -3,6 +3,19 @@ import json
 import cv2
 import numpy as np
 
+# Supprimer tous les fichiers dans le dossier 'mat'
+mat_dir = 'C:/Users/verne/Documents/GitHub/hover_net2/mat'
+if os.path.exists(mat_dir):
+    for filename in os.listdir(mat_dir):
+        file_path = os.path.join(mat_dir, filename)
+        if os.path.isfile(file_path):
+            os.remove(file_path)
+
+# Supprimer le fichier 'qupath'
+qupath_file = 'C:/Users/verne/Documents/GitHub/hover_net2/qupath'
+if os.path.exists(qupath_file):
+    os.remove(qupath_file)
+    
 def get_pixels_inside_contour(image, contour):
     mask = np.zeros(image.shape[:2], dtype=np.uint8)
     cv2.drawContours(mask, [contour], -1, (255), thickness=cv2.FILLED)
