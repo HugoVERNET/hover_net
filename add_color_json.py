@@ -41,3 +41,6 @@ for filename in os.listdir(json_dir):
         output_path = os.path.join(output_dir, f'{base_name}-final.json')
         with open(output_path, 'w') as outfile:
             json.dump(data, outfile, indent=4)
+        
+        # Supprimer le fichier JSON original
+        os.remove(json_path)
