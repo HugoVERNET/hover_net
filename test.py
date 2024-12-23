@@ -10,7 +10,7 @@ import csv
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Paramètres ajustés
-wsi_path = "C:/Users/verne/Desktop/M1/Projet annee/WSI-segmentation/HES/020D.tif"  # Remplacez par le chemin de votre WSI
+wsi_path = "data/CHULille/WSI/MariannePETIT/001/HES"  # Remplacez par le chemin de votre WSI
 patch_width = 400
 patch_height = 400
 
@@ -21,8 +21,8 @@ overlap = 0
 
 
 # Dossiers de sortie
-output_dir_non_white = "C:/Users/verne/Documents/GitHub/hover_net2/resultat/patch_non_white"  # Dossier pour les patches non-blancs
-output_dir_white = "C:/Users/verne/Documents/GitHub/hover_net2/resultat/patch_white"      # Dossier pour les patches blancs
+output_dir_non_white = "data/resultat/patch_non_white"  # Dossier pour les patches non-blancs
+output_dir_white = "data/resultat/patch_white"      # Dossier pour les patches blancs
 os.makedirs(output_dir_non_white, exist_ok=True)
 os.makedirs(output_dir_white, exist_ok=True)
 

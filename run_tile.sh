@@ -6,12 +6,12 @@ python run_infer.py \
 --type_info_path=type_info.json \
 --batch_size=8 \
 --model_mode="fast" \
---model_path='C:/Program Files/Git/hovernet_fast_pannuke_type_tf2pytorch.tar' \
+--model_path='data/hovernet_fast_pannuke_type_tf2pytorch.tar' \
 --nr_inference_workers=8 \
 --nr_post_proc_workers=16 \
 tile \
---input_dir="C:/Users/verne/Documents/GitHub/hover_net2/resultat/patch_non_white" \
---output_dir="C:/Users/verne/Documents/GitHub/hover_net2/resultat" \
+--input_dir="data/resultat/patch_non_white" \
+--output_dir="data/hover_net2/resultat" \
 --mem_usage=0.1 \
 --draw_dot \
 --save_qupath \

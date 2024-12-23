@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 
 # Supprimer tous les fichiers dans le dossier 'mat'
-mat_dir = 'C:/Users/verne/Documents/GitHub/hover_net2/mat'
+mat_dir = 'data/resultat/mat'
 if os.path.exists(mat_dir):
     for filename in os.listdir(mat_dir):
         file_path = os.path.join(mat_dir, filename)
@@ -12,7 +12,7 @@ if os.path.exists(mat_dir):
             os.remove(file_path)
 
 # Supprimer le fichier 'qupath'
-qupath_file = 'C:/Users/verne/Documents/GitHub/hover_net2/qupath'
+qupath_file = 'data/resultat/qupath'
 if os.path.exists(qupath_file):
     os.remove(qupath_file)
     
@@ -23,8 +23,8 @@ def get_pixels_inside_contour(image, contour):
     return pixels.tolist()
 
 # Répertoires
-json_dir = 'C:/Users/verne/Documents/GitHub/hover_net2/resultat/json'
-image_dir = 'C:/Users/verne/Documents/GitHub/hover_net2/resultat/patch_non_white'
+json_dir = 'data/resultat/json'
+image_dir = 'data/resultat/patch_non_white'
 output_dir = os.path.join(json_dir, 'final')
 os.makedirs(output_dir, exist_ok=True)
 
